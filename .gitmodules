@@ -1,0 +1,7 @@
+[submodule "submodules/chaquopy-wheels"]
+	path = submodules/chaquopy-wheels
+	url = https://github.com/emanuele-f/chaquopy-wheels.git
+[submodule "submodules/mitmproxy"]
+	path = submodules/mitmproxy
+	url = https://github.com/emanuele-f/mitmproxy.git
+	branch = pcapdroid-11.0.0
