@@ -10,5 +10,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "PCAPdroid mitm"
+rootProject.name = "kcanotify mitm"
 include ':app'

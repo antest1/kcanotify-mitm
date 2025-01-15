@@ -132,10 +132,10 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/open_pcapdroid"
+        android:id="@+id/open_kcanotify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/open_pcapdroid"
+        android:text="@string/open_kcanotify"
         android:layout_marginTop="20dp"
         android:layout_gravity="center" />
 

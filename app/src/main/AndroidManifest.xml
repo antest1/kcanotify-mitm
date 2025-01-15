@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <queries>
-        <package android:name="com.emanuelef.remote_capture" />
-        <package android:name="com.emanuelef.remote_capture.debug" />
+        <package android:name="com.antest1.kcanotify" />
     </queries>
 
     <uses-permission android:name="android.permission.INTERNET" />

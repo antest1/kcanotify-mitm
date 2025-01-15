@@ -1,4 +1,4 @@
-package com.pcapdroid.mitm;
+package com.antest1.kcanotify.mitm;
 
 public class Addon {
     public String fname;

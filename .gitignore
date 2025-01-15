@@ -19,3 +19,9 @@ app/release/
 app/debug/
 dist/
 keystore
+
+app/arm32/
+app/arm64/
+app/arm/
+app/x86/
+app/x86_64/

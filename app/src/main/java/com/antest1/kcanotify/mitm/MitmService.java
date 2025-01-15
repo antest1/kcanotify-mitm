@@ -17,7 +17,7 @@
  * Copyright 2022-24 - Emanuele Faranda
  */
 
-package com.pcapdroid.mitm;
+package com.antest1.kcanotify.mitm;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -46,7 +46,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
-import com.pcapdroid.mitm.MitmAPI.MitmConfig;
+import com.antest1.kcanotify.mitm.MitmAPI.MitmConfig;
 
 public class MitmService extends Service implements Runnable {
     static final String TAG = "Mitmproxy";

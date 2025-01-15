@@ -17,11 +17,12 @@
  * Copyright 2023 - Emanuele Faranda
  */
 
-package com.pcapdroid.mitm;
+package com.antest1.kcanotify.mitm;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +43,7 @@ public class MainActivity extends Activity {
         PyObject openssl_backend = openssl_backend_module.get("backend");
 
         ((TextView)findViewById(R.id.addon_version)).setText("v" + BuildConfig.VERSION_NAME);
-        ((TextView)findViewById(R.id.abi)).setText(BuildConfig.FLAVOR);
+        ((TextView)findViewById(R.id.abi)).setText(Build.SUPPORTED_ABIS[0]);
         ((TextView)findViewById(R.id.mitmproxy_version)).setText(
                 metadata.callAttr("version", "mitmproxy").toString());
         ((TextView)findViewById(R.id.cryptography_version)).setText(
@@ -51,15 +52,12 @@ public class MainActivity extends Activity {
                 openssl_backend.callAttr("openssl_version_text").toString());
         ((TextView)findViewById(R.id.python_version)).setText(
                 sys.get("version").toString());
-        findViewById(R.id.open_pcapdroid).setOnClickListener(v -> {
+        findViewById(R.id.open_kcanotify).setOnClickListener(v -> {
             try {
                 Intent intent = null;
                 try {
-                    intent = getPackageManager().getLaunchIntentForPackage("com.emanuelef.remote_capture");
+                    intent = getPackageManager().getLaunchIntentForPackage("com.antest1.kcanotify");
                 } catch (ActivityNotFoundException ignored) {}
-
-                if(intent == null)
-                    intent = getPackageManager().getLaunchIntentForPackage("com.emanuelef.remote_capture.debug");
 
                 if(intent != null) {
                     startActivity(intent);

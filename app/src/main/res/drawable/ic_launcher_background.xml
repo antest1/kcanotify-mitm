@@ -12,7 +12,7 @@
         android:pathData="M0.125,-0.25h48.375v48.375h-48.375z"
         android:strokeLineJoin="miter"
         android:strokeWidth="0"
-        android:fillColor="#512da8"
+        android:fillColor="#313447"
         android:fillType="nonZero"
         android:strokeColor="#00000000"
         android:strokeLineCap="butt"/>

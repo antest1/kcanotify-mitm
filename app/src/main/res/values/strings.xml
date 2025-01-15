@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">PCAPdroid mitm</string>
-    <string name="intro_text">You can control the mitm addon from the PCAPdroid app</string>
+    <string name="app_name">kcanotify mitm</string>
+    <string name="intro_text">You can control the mitm addon from the kcanotify</string>
     <string name="python">Python</string>
     <string name="mitmproxy">Mitmproxy</string>
     <string name="cryptography">Cryptography</string>
     <string name="abi">ABI</string>
     <string name="openssl">OpenSSL</string>
-    <string name="open_pcapdroid">Open PCAPdroid</string>
+    <string name="open_kcanotify">Open kcanotify</string>
     <string name="addon">Addon</string>
     <string name="js_injector">Js Injector</string>
     <string name="hint">Hint</string>

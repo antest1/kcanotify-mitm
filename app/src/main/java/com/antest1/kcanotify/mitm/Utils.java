@@ -17,7 +17,7 @@
  * Copyright 2023 - Emanuele Faranda
  */
 
-package com.pcapdroid.mitm;
+package com.antest1.kcanotify.mitm;
 
 import android.app.AlertDialog;
 import android.content.ContentUris;
