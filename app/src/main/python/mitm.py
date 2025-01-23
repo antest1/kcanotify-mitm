@@ -192,7 +192,7 @@ def checkCertificate():
             with open(CA_CERT_PATH, "rb") as cert_file:
                 cert_data = cert_file.read()
                 cert = Cert.from_pem(cert_data)
-                if (cert.cn == "PCAPdroid CA") and (not cert.has_expired()):
+                if (cert.cn == "Kcanotify CA") and (not cert.has_expired()):
                     # valid
                     return
                 print(cert.cn)
@@ -201,7 +201,7 @@ def checkCertificate():
 
     # needs generation
     print("Generating certificates...")
-    CertStore.create_store(Path(MITMPROXY_CONF_DIR), "mitmproxy", 2048, "PCAPdroid", "PCAPdroid CA")
+    CertStore.create_store(Path(MITMPROXY_CONF_DIR), "mitmproxy", 2048, "Kcanotify", "Kcanotify CA")
 
 # Entrypoint: returns the mitmproxy CA certificate PEM
 def getCAcert() -> str:
