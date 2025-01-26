@@ -55,7 +55,7 @@ class MsgType(Enum):
     TLS_ERROR = "tls_err"
     HTTP_ERROR = "http_err"
     HTTP_REQUEST = "http_req"
-    HTTP_REPLY = "http_rep"
+    HTTP_REPLY = "http_res"
     TCP_CLIENT_MSG = "tcp_climsg"
     TCP_SERVER_MSG = "tcp_srvmsg"
     TCP_ERROR = "tcp_err"
