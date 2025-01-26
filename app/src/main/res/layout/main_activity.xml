@@ -140,10 +140,10 @@
         android:layout_gravity="center" />
 
     <Button
-        android:id="@+id/addons"
+        android:id="@+id/source_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/addons"
+        android:text="@string/source_code"
         android:layout_marginTop="10dp"
         android:layout_gravity="center" />
 </LinearLayout>

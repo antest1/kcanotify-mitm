@@ -39,4 +39,5 @@
     <string name="enable">Enable</string>
     <string name="permission_already_granted">Permission already granted</string>
     <string name="files_access_not_granted">Files access was not granted</string>
+    <string name="source_code">Github (Source Code)</string>
 </resources>

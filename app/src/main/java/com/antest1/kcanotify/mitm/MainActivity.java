@@ -22,6 +22,7 @@ package com.antest1.kcanotify.mitm;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -31,6 +32,8 @@ import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 
 public class MainActivity extends Activity {
+    private final String GITHUB_URL = "https://github.com/antest1/kcanotify-mitm";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,9 +70,9 @@ public class MainActivity extends Activity {
 
             (Toast.makeText(this, R.string.app_not_found, Toast.LENGTH_SHORT)).show();
         });
-        findViewById(R.id.addons).setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, AddonsActivity.class);
-            startActivity(intent);
+        findViewById(R.id.source_code).setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(GITHUB_URL));
+            startActivity(browserIntent);
         });
     }
 }
