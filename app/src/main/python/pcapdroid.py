@@ -172,13 +172,13 @@ class PCAPdroid:
     # override
     def response(self, flow: http.HTTPFlow) -> None:
         if flow.response:
-            if hasattr(flow, "js_injector_scripts"):
-                self.send_message(flow.response.timestamp_start, flow.client_conn, flow.server_conn,
-                                  MsgType.JS_INJECTED, flow.js_injector_scripts.encode("ascii"))
-
-            data = self.checkPayload(flow, assemble_response(flow.response), req=False)
-            if data:
-                self.send_message(flow.response.timestamp_start, flow.client_conn, flow.server_conn, MsgType.HTTP_REPLY, data)
+            headers = flow.response.headers
+            is_text_body = headers["content-type"] in ("text/plain", "application/json")
+            if is_text_body:
+                data = self.checkPayload(flow, assemble_response(flow.response), req=False)
+                self.send_message(flow.request.timestamp_start, flow.client_conn, flow.server_conn, MsgType.HTTP_REPLY, data)
+            else:
+                self.send_message(flow.request.timestamp_start, flow.client_conn, flow.server_conn, MsgType.HTTP_REPLY, b'')
 
     # override
     def tcp_message(self, flow: mitmproxy.tcp.TCPFlow):
